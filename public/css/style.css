@@ -72,6 +72,11 @@ body {
     color: #fff;
 }
 
+.generate-btn:hover {
+    color: #fff;
+    background-color: #3983bd;
+}
+
 .footer-padding {
     padding-bottom: 60px;
 }
