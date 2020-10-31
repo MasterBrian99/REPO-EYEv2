@@ -2,7 +2,6 @@
 
 body {
     background-color: #2d344e;
-    overflow: hidden;
 }
 
 .navbar {
@@ -13,8 +12,6 @@ body {
     background: linear-gradient(306deg,
             rgba(68, 95, 179, 1) 0%,
             rgba(67, 83, 132, 1) 100%);
-    -webkit-box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
 }
 
 .nav-item {
@@ -82,7 +79,7 @@ body {
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     text-align: center;
     bottom: 0;
     width: 100%;
@@ -107,4 +104,22 @@ body {
 
 .footer p a:hover {
     text-decoration: none;
+}
+
+/* info css  */
+
+.info-div {
+    height: 200px;
+    border-radius: 10px;
+    padding: 2% 0;
+
+    background: rgb(145, 112, 229);
+    background: linear-gradient(171deg,
+            rgba(145, 112, 229, 1) 0%,
+            rgba(58, 71, 114, 1) 100%);
+}
+
+.inside-shadow {
+    -webkit-box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
 }
