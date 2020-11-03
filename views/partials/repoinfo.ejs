@@ -1,0 +1,35 @@
+    <!-- start  -->
+    <div class="container-fluid my-3 ">
+        <div class="row   no-gutters ">
+            <div class="col-lg-3 text-center  profile-div">
+                <h3 class="type"> <%= type %> </h4>
+                    <img src="<%= avatar_url %>" alt="" srcset="">
+                    <h4 class="fullName"><%= name %> </h4>
+                    <h4 class="userName"><a href=" <%= html_url %> " target="_blank"> <%= login %> </a></h4>
+                    <h4 class="bio"> <%= bio %> </h4>
+
+                    <a href="<%= html_url %>  " class="btn btn-lg  btn-view"> View Profile</a>
+                    <ul class="list-group stats-info">
+                        <li class="list-group-item d-flex justify-content-between align-items-center stats-info-item">
+                            Followers
+                            <span class="badge badge-primary badge-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center stats-info-item">
+                            Following
+                            <span class="badge badge-primary badge-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center stats-info-item">
+                            Stars
+                            <span class="badge badge-primary badge-pill">1</span>
+                        </li>
+                    </ul>
+
+            </div>
+            <div class="col  profile-div info-div">
+
+
+            </div>
+
+        </div>
+
+    </div>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo&family=Signika&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 body {
     background-color: #2d344e;
@@ -108,18 +109,124 @@ body {
 
 /* info css  */
 
-.info-div {
-    height: 200px;
+.profile-div {
     border-radius: 10px;
     padding: 2% 0;
 
-    background: rgb(145, 112, 229);
-    background: linear-gradient(171deg,
-            rgba(145, 112, 229, 1) 0%,
-            rgba(58, 71, 114, 1) 100%);
+    background-color: #323650;
+    -webkit-box-shadow: 0px 0px 28px 1px rgba(0, 0, 0, 0.53);
+    box-shadow: 0px 0px 28px 1px rgba(0, 0, 0, 0.53);
+
+}
+
+.profile-div img {
+    width: 200px;
+    border-radius: 100%;
+    border: 5px double #5378B1;
 }
 
 .inside-shadow {
     -webkit-box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* profile card  */
+
+h3 {
+    font-family: "Arimo", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+h4 {
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+}
+
+.fullName {
+    margin-top: 4%;
+}
+
+
+
+.userName a {
+    color: #cfbdf8;
+}
+
+.userName a:hover {
+    text-decoration: none;
+}
+
+.bio {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0 2%;
+}
+
+.btn-view {
+    border-radius: 20px;
+    background-color: #59A9E6;
+    -webkit-box-shadow: 9px 13px 26px -9px #000000;
+    box-shadow: 9px 13px 26px -9px #000000;
+    color: #fff;
+    margin: 2% 0;
+}
+
+.btn-view:hover {
+    background-color: #6381E1;
+    color: #fff;
+}
+
+.stats-info {
+    margin: 0 10%;
+}
+
+.stats-info-item {
+    color: #fff;
+    margin: 0 1%;
+    background-color: transparent;
+    border: none;
+}
+
+/* info  */
+
+.info-div {
+    margin-left: 2%;
+    color: #fff;
+
+
+
+}
+
+
+.progress-languages {
+    background: rgb(93, 47, 93);
+    background: linear-gradient(157deg, rgba(93, 47, 93, 1) 0%, rgba(204, 88, 212, 1) 100%);
+    -webkit-box-shadow: 9px 13px 26px -9px #000000;
+    box-shadow: 9px 13px 26px -9px #000000;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 10px;
+
+}
+
+.progress {
+    margin: 1%;
+
+}
+
+
+
+
+
+@media(max-width:991px) {
+
+    .info-div {
+        margin-left: 0;
+        margin-top: 2%;
+
+
+    }
 }
