@@ -1,8 +1,5 @@
 //jshint esversion:6
 
-
-//f092f8ec7f2e9c29f0484d93f35ffe3662a86f86
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -19,6 +16,18 @@ app.use(express.static("public"));
 let info;
 let repoName;
 let usrInfo;
+let type;
+let avatar_url;
+let login;
+let html_url;
+let name;
+let bio;
+let followers;
+let following;
+let created_at;
+let dat;
+let updated_at;
+let lastLogin;
 
 
 
@@ -36,28 +45,59 @@ app.post("/", function(req, res) {
     repoName = req.body.repoUrl;
 
     if (repoName == "") {
-
         res.redirect("/");
-
     } else {
         var options = {
             url: 'https://api.github.com/repos/' + repoName,
-
             headers: {
                 'User-Agent': 'repo-eye'
             }
         };
 
+
         function callback(error, response, body) {
             if (!error && response.statusCode == 200) {
                 info = JSON.parse(body);
                 console.log("done");
-                res.redirect("/info");
 
-                //  console.log(info.forks_count + " Forks");
+                var option = {
+                    url: info.owner.url,
+                    headers: {
+                        'User-Agent': 'repo-eye'
+                    }
+                };
+
+
+                function callbacks(error, response, body) {
+                    if (!error && response.statusCode == 200) {
+                        usrInfo = JSON.parse(body);
+
+                        type = usrInfo.type;
+                        avatar_url = usrInfo.avatar_url;
+                        login = usrInfo.login;
+                        html_url = usrInfo.html_url;
+                        name = usrInfo.name;
+                        bio = usrInfo.bio;
+                        followers = usrInfo.followers;
+                        following = usrInfo.following;
+
+                        dat = usrInfo.created_at.split("T");
+                        created_at = dat[0];
+
+                        lastLogin = usrInfo.updated_at.split("T");
+                        updated_at = lastLogin[0];
+
+                        res.redirect("/info");
+                    }
+
+                };
+
+                request(option, callbacks);
+
+                //      res.redirect("/info");
+
             } else {
                 console.log("failed");
-
                 res.redirect("/");
             }
         };
@@ -73,33 +113,8 @@ app.post("/", function(req, res) {
 });
 
 app.get("/info", function(req, res) {
-    var options = {
-        url: info.owner.url,
-        headers: {
-            'User-Agent': 'repo-eye'
-        }
-    };
-    let type;
-    let avatar_url;
-    let login;
-    let html_url;
-    let name;
-    let bio;
-
-    function callback(error, response, body) {
-        usrInfo = JSON.parse(body);
-
-    };
-
-    request(options, callback);
 
 
-    type = usrInfo.type;
-    avatar_url = usrInfo.avatar_url;
-    login = usrInfo.login;
-    html_url = usrInfo.html_url;
-    name = usrInfo.name;
-    bio = usrInfo.bio;
 
     res.render("pages/info", {
         type: type,
@@ -107,11 +122,13 @@ app.get("/info", function(req, res) {
         login: login,
         html_url: html_url,
         name: name,
-        bio: bio
+        bio: bio,
+        followers: followers,
+        following: following,
+        created_at: created_at,
+        updated_at: updated_at
     });
 });
-
-
 
 
 
