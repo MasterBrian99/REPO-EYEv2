@@ -28,7 +28,44 @@
                     </div>
             </div>
             <div class="col  profile-div info-div">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="information-div">
+                            <h3 class="text-center">Basic Information</h4>
+                                <h4 class="txt-info-text">Repository Name : <span> <%= name %> </span></h4>
+                                <h4 class="txt-info-text">Default Branch : <span> <%= default_branch %> </span></h4>
+                                <h4 class="txt-info-text">Repository Description : <span><%= description %> </span></h4>
+                                <h4 class="txt-info-text">Language : <span> <%= language %> </span></h4>
+                                <h4 class="txt-info-text">Repository Size : <span><%= size %> </span></h4>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="information-div">
+                            <h3 class="text-center">Repository Statistics</h4>
+                                <h4 class="txt-info-text">Forks : <span> <%= forks_count %> </span></h4>
+                                <h4 class="txt-info-text">Watchers : <span><%= subscribers_count %> </span></h4>
+                                <h4 class="txt-info-text">Open Issues : <span><%= open_issues_count %> </span></h4>
+                                <h4 class="txt-info-text">Total Stars : <span><%= stargazers_count %> </span></h4>
+                        </div>
 
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="information-div">
+                            <h3 class="text-center">Repository URLs</h4>
+
+                                <h4 class="txt-info-text">git_url : <span><a href="<%= git_url %>  " target="_black" class="repo-urls"><%= git_url %> </a></span></h4>
+                                <h4 class="txt-info-text">ssh_url : <span><a href="<%= ssh_url %>  " target="_black" class="repo-urls"><%= ssh_url %></a></span></h4>
+                                <h4 class="txt-info-text">clone_url : <span><a href="<%= clone_url %>  " target="_black" class="repo-urls"><%= clone_url %> </a></span></h4>
+                                <h4 class="txt-info-text">svn_url : <span><a href="<%= svn_url %> " target="_black" class="repo-urls"><%= svn_url %></a></span></h4>
+
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
 

@@ -75,44 +75,14 @@ body {
     background-color: #3983bd;
 }
 
-.footer-padding {
-    padding-bottom: 60px;
-}
 
-.footer {
-    position: fixed;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background: rgb(68, 95, 179);
-    background: linear-gradient(306deg,
-            rgba(68, 95, 179, 1) 0%,
-            rgba(67, 83, 132, 1) 100%);
-    -webkit-box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
-}
-
-.footer p {
-    margin-top: 25px;
-    font-size: 15px;
-    color: #fff;
-}
-
-.footer p a {
-    color: #fff;
-}
-
-.footer p a:hover {
-    text-decoration: none;
-}
 
 /* info css  */
 
 .profile-div {
+    padding-top: 1%;
     border-radius: 10px;
-    padding: 2% 0;
-
+    margin-bottom: 5%;
     background-color: #323650;
     -webkit-box-shadow: 0px 0px 28px 1px rgba(0, 0, 0, 0.53);
     box-shadow: 0px 0px 28px 1px rgba(0, 0, 0, 0.53);
@@ -188,6 +158,7 @@ h4 {
     margin: 0 1%;
     background-color: transparent;
     border: none;
+    font-size: 1.3rem;
 }
 
 /* info  */
@@ -201,21 +172,35 @@ h4 {
 }
 
 
-.progress-languages {
-    background: rgb(93, 47, 93);
-    background: linear-gradient(157deg, rgba(93, 47, 93, 1) 0%, rgba(204, 88, 212, 1) 100%);
-    -webkit-box-shadow: 9px 13px 26px -9px #000000;
-    box-shadow: 9px 13px 26px -9px #000000;
+.information-div {
     margin: 2%;
     padding: 2%;
-    border-radius: 10px;
+    border-radius: 20px;
+    -webkit-box-shadow: 9px 13px 26px -9px #000000;
+    box-shadow: 9px 13px 26px -9px #000000;
+    background: rgb(63, 114, 159);
+    background: linear-gradient(123deg, rgba(63, 114, 159, 1) 0%, rgba(87, 223, 206, 1) 100%);
+}
+
+.txt-info-text {
+    color: #D3D3D3;
 
 }
 
-.progress {
-    margin: 1%;
+span {
+    color: #fff;
 
 }
+
+.repo-urls {
+    color: #fff;
+}
+
+.repo-urls:hover {
+    text-decoration: none;
+    color: yellow;
+}
+
 
 .date-set {
     margin-top: 8%;
@@ -223,6 +208,44 @@ h4 {
 
 }
 
+.badge {
+    font-size: 1rem;
+    padding: 3%;
+}
+
+
+
+.footer-padding {
+    padding-bottom: 60px;
+}
+
+.footer {
+    padding-top: 20px;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: rgb(68, 95, 179);
+    background: linear-gradient(306deg,
+            rgba(68, 95, 179, 1) 0%,
+            rgba(67, 83, 132, 1) 100%);
+    -webkit-box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.footer p {
+    font-size: 15px;
+    color: #fff;
+}
+
+.footer p a {
+    color: #fff;
+}
+
+.footer p a:hover {
+    text-decoration: none;
+}
 
 
 
@@ -233,5 +256,9 @@ h4 {
         margin-top: 2%;
 
 
+    }
+
+    .profile-div {
+        margin-bottom: 15%;
     }
 }
