@@ -11,7 +11,7 @@ REPO-EYE is a simple Node app to get information about repositories.The website 
 
 [sameera-madushan](https://github.com/sameera-madushan) .his [RepoPeek](https://github.com/sameera-madushan/RepoPeek) repository gave me this idea.
 
-## Run localy
+## Run locally
 
 ### Install
 ```sh
