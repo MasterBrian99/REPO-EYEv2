@@ -40,7 +40,6 @@ app.post("/", function(req, res) {
         function callback(error, response, body) {
             if (!error && response.statusCode == 200) {
                 info = JSON.parse(body);
-                console.log("done");
 
                 var option = {
                     url: info.owner.url,
@@ -61,7 +60,6 @@ app.post("/", function(req, res) {
 
 
             } else {
-                console.log("failed");
                 res.redirect("/");
             }
         };
@@ -74,6 +72,11 @@ app.post("/", function(req, res) {
 
 
 });
+
+app.get("/about", function(req, res) {
+    res.redirect("/");
+});
+
 
 app.get("/info", function(req, res) {
 
@@ -125,5 +128,4 @@ app.get("/info", function(req, res) {
 
 app.listen(3000, function() {
 
-    console.log("Server started on port 3000.");
 });
